@@ -25,3 +25,42 @@ function showMenu(){
 
 
 
+var pElemB= document.getElementsByClassName('thumb');
+
+for(var i=0; i<pElemB.length; i++){
+    pElemB[i].addEventListener('click', thumbsDown)
+    var counter = document.createElement('div');
+    counter.className = 'hater';
+    pElemB[i].appendChild(counter);
+}
+
+function thumbsDown(){
+   var haterCount=this.querySelectorAll('.hater')[0];
+   haterCount.innerHTML++
+}
+
+
+// // function dislikes(){
+// //     //console.log('hi')
+// //     var haterCount = this.querySelectorAll('.hater')[0];
+// //     //console.log(haterCount);
+// //     haterCount.innerHTML++;
+// // }
+
+
+
+
+
+// var pElemB= document.getElementsByClassName('thumb');
+
+// var thumbsDownClick=0
+
+// for(var i=0; i<pElemB.length; i++){
+//     pElemB[i].addEventListener('click', thumbsDown);
+//     var button=document.getElementsByClassName('thumb');
+//     var count=1;
+//     button.onclick=function thumbsDown(){
+//         count+=1;
+//         button.innerHTML++
+//     }
+// }
